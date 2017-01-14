@@ -1,0 +1,22 @@
+﻿Step #1: Install a C++ Compiler
+As a matter of best practice we’ll update our packages:
+apt-get update
+The build-essential package should already be installed, however, we’re going still going to include it in our command for installation:
+apt-get install build-essential libssl-dev
+Step #2: Install NVM (Node Version Manager)
+Use the following curl command to kick-off the install script:
+curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
+At the time of publication, NVM v0.25.0 was the most recent version available. You should check theGitHub project page for the latest release of NVM, and adjust the above command to include the newest version. For example, if the most recent version was 0.30.2, then your command would be similar to:
+curl https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+After running the above command, you may receive output similar to the following:
+Close and reopen your terminal to start using nvm
+Either do as the output suggests, and close and reopen your terminal session, or run the following command:
+source ~/.profile
+Step #3: Verify the Installation
+We can quickly verify that NVM is now installed and working properly with the following command:
+nvm --version
+Which in this case would yield a result of:
+0.25.0
+Another very useful command to get you started on node.js management is:
+nvm help
+
